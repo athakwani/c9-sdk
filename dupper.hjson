@@ -13,8 +13,9 @@
       "name": "cloud-9-sdk",
       "cmd":
       '''    
-        apt-add-repository ppa:fkrull/deadsnakes-python2.7
-        apt-get update
+        apt-get install -y software-properties-common
+        apt-add-repository -y ppa:fkrull/deadsnakes-python2.7
+        apt-get update -y
         apt-get install -y build-essential g++ curl libssl-dev apache2-utils libxml2-dev sshfs python2.7 python2.7-dev
         git clone https://github.com/c9/core.git cloud9
         cd cloud9
