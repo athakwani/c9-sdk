@@ -1,0 +1,42 @@
+{
+  ports: 
+  [
+    "8000:8000"
+  ],
+  env:
+  [
+    "NODE_ENV=development"
+  ]
+  dependencies:
+  [
+    {
+      "name": "cloud-9-packages",
+      "cmd":
+      '''
+        apt-get install -y build-essential g++ curl libssl-dev apache2-utils libxml2-dev sshfs
+        git clone https://github.com/c9/core.git cloud9
+        cd cloud9
+        scripts/install-sdk.sh
+        sed -i -e 's_127.0.0.1_0.0.0.0_g' configs/standalone.js 
+      '''
+    }      
+  ],
+  commands: {
+    c9: [{
+      server:
+      '''
+        # Start debugger in background detached from terminal
+        start-stop-daemon -b --start --quiet --oknodo \
+        --pidfile /var/run/c9.pid --exec $HOME/.c9/node/bin/node \
+        -- /root/cloud9/server.js --listen 0.0.0.0 --port 8000 -w $REPO_ROOT
+        exit_code=$?
+        _export exit_code
+      '''
+    },{
+      client:
+      '''
+        [ $exit_code -eq 0 ] && open http://$SERVER_IP:8000/
+      '''
+    }]      
+   }
+}
