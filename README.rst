@@ -3,7 +3,7 @@ This repository container `dupper <https://github.com/athakwani/dupper>`_ templa
 Cloud 9 Development Environment SDK
 ===================================
 
-Cloud 9 SDK setup browser based development environment. You can start Cloud 9 sdk for any git repository using dupper by running below commands. 
+Cloud 9 SDK setup browser based development environment for plugin development. You can start Cloud 9 sdk with any git repository using dupper by running below commands. 
 
 .. code-block:: bash
 
