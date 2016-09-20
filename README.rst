@@ -1,9 +1,9 @@
-This repository container `dupper <https://github.com/athakwani/dupper>`_ template for Cloud-9 development environment SDK.
+This dupper template repository is for Cloud-9 development environment SDK.
 
-Cloud 9 Development Environment SDK
-===================================
+Cloud 9 SDK
+===========
 
-Cloud 9 SDK setup browser based development environment for plugin development. You can start Cloud 9 sdk with any git repository using dupper by running below commands. 
+This template starts Cloud 9 SDK for plugin development. You can start Cloud 9 sdk with any git repository using below commands:
 
 .. code-block:: bash
 
