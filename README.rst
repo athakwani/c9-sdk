@@ -1,4 +1,4 @@
-This dupper template repository is for Cloud-9 development environment SDK.
+This dupper template repository is for Cloud-9 SDK.
 
 Cloud 9 SDK
 ===========
