@@ -35,7 +35,10 @@
     },{
       client:
       '''
-        [ $exit_code -eq 0 ] && open http://$SERVER_IP:8000/
+        os="$(uname -s)"
+        if [[ $os == "Darwin" ]]; then
+            [ $exit_code -eq 0 ] && open http://$SERVER_IP:8000/
+        fi        
       '''
     }]      
    }
