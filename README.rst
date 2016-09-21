@@ -7,7 +7,7 @@ This template starts Cloud 9 SDK for plugin development. You can start Cloud 9 s
 
 .. code-block:: bash
 
-  dupper dup --name=myrepo --template-from=https://github.com/athakwani/c9-sdk <YOUR_GIT_REPO_URL>
+  dupper dup --name=myrepo --template-from=https://github.com/athakwani/c9-sdk GITURL
   dupper exec myrepo c9
     
 Commands
